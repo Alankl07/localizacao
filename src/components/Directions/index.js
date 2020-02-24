@@ -1,12 +1,16 @@
 import React from 'react';
 import  MapViewDirections from 'react-native-maps-directions';
 
-const Directions = ({ destination, origin, onReady }) => (
+const Directions = ({ destination, origin, onReady, waypoints }) => (
     <MapViewDirections
         destination = {destination}
         origin = {origin}
         onReady = {onReady}
-        apikey = "AIzaSyA0g97OgHoAdXUHROlDmJ_LIJtZH6gMI2E"
+        waypoints =  { waypoints}
+        optimizeWaypoints ={waypoints}
+        travelMode = 'DRIVING'
+        avoidTolls = {true}
+        apikey = {key}
         strokeWidth = {3}
         strokeColor = "#222"
     />
